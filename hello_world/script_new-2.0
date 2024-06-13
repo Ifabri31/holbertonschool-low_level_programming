@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Nombre del archivo:"
+read -e var1
+echo "#!/bin/bash" > "$var1" && chmod u+x "$var1"
+vim $var1

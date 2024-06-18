@@ -2,5 +2,5 @@
 
 echo "Nombre del archivo:"
 read -e var1
-echo "#include <stdio.h>" > "$var1" && chmod u+x "$var1"
+echo "#include \"main.h\"" > "$var1" && chmod u+x "$var1"
 vim $var1

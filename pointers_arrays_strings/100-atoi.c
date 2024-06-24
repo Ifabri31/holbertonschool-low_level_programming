@@ -10,24 +10,11 @@ int _atoi(char *s)
 	int signo = 1;
 	int i = 0;
 
-	while (s[i] == ' ')
-	{
-		i++;
-	}
+	// determinar que signo tiene
 	if (s[i] == '-')
-	{
-		signo = -1;
-		i++;
-	}
-	else if (s[i] == '+')
-	{
-		i++;
-	}
+
+	// Pasar el numero a entero
 	while (s[i] >= '0' && s[i] <= '9')
 	{
 		result = result * 10 + (s[i] - '0');
 		i++;
-	}
-
-	return (signo * result);
-}

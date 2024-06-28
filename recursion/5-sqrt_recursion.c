@@ -1,5 +1,22 @@
 #include "main.h"
 /**
+ * math_sqrt  - funcion
+ * @n: un int
+ * @i: otro int
+ *
+ * Return: result
+ */
+
+int math_sqrt(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (math_sqrt(n, i + 1));
+}
+
+/**
  * _sqrt_recursion - square root of a number
  * @n: number
  *
@@ -8,15 +25,7 @@
 
 int _sqrt_recursion(int n)
 {
-	int i = n / 2;
-
 	if (n < 0)
 		return (-1);
-	if (n == 0 || n == 1)
-		return (n);
-	if (i * i == n)
-		return (i);
-	if (i * i > n)
-		return (_sqrt_recursion(i));
-	return (_sqrt_recursion(n - (i * i - n)));
+	return (math_sqrt(n, 0));
 }

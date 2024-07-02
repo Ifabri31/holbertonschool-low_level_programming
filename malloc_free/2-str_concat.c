@@ -1,6 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ * str_concat - concatenar strings
+ * @s1: string1
+ * @s2: string2
+ *
+ * Return: strings concatenado
  */
 
 char *str_concat(char *s1, char *s2)
@@ -25,6 +30,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (ii = 0; ii < longs2; ii++)
 		s3[i] = s2[ii];
+	s3[i] = '\0';
 
 	return (s3);
 }

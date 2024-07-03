@@ -11,21 +11,20 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s3;
-	unsigned int i, i2, longs2, longs1;
+	unsigned int i, i2;
+	int long1 = 0, long2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	for (longs2 = 0; s2[longs2] != '\0'; longs2++)
-	{
-	}
-	for (longs1 = 0; s1[longs1] != '\0'; longs1++)
-	{
-	}
+	while (s1[long1] != '\0')
+		long1++;
+	while (s2[long2] != '\0')
+		long2++;
 
-	s3 = malloc((longs1 + longs2 + 1) * sizeof(char));
+	s3 = malloc((long1 + long2 + 1) * sizeof(char));
 	if (s3 == NULL)
 		return (NULL);
 

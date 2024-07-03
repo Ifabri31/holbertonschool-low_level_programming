@@ -11,7 +11,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s3;
-	unsigned int i, ii, longs2, longs1;
+	unsigned int i, i2, longs2, longs1;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -19,17 +19,25 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	for (longs2 = 0; s2[longs2] != '\0'; longs2++)
+	{
+	}
 	for (longs1 = 0; s1[longs1] != '\0'; longs1++)
+	{
+	}
 
 	s3 = malloc((longs1 + longs2 + 1) * sizeof(char));
 	if (s3 == NULL)
 		return (NULL);
 
-	for (i = 0; i < longs1; i++)
+	for (i = 0; i != '\0'; i++)
+	{
 		s3[i] = s1[i];
+	}
 
-	for (ii = 0; ii < longs2; ii++, i++)
-		s3[i] = s2[ii];
+	for (i2 = 0; s2[i2] != '\0'; i2++, i++)
+	{
+		s3[i] = s2[i2];
+	}
 	s3[i] = '\0';
 
 	return (s3);

@@ -4,6 +4,8 @@
  * free_grid - frees grid created by alloc_grid
  * @grid: pointer to the array
  * @height: the grid
+ *
+ * Return: void
  */
 
 void free_grid(int **grid, int height)
@@ -12,6 +14,7 @@ void free_grid(int **grid, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		free(grid);
+		free(grid[i]);
 	}
+	free(grid);
 }

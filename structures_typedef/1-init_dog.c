@@ -1,5 +1,10 @@
 #include "dog.h"
 /**
+ * init_dog - inicia un perrito
+ * @d: pointer
+ * @name: nombre
+ * @age: edad
+ * @owner: due√o
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)

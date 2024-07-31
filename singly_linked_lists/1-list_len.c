@@ -1,5 +1,9 @@
 #include "lists.h"
 /**
+ * list_len - retorna numero de elementos
+ * @h: puntero
+ *
+ * Return: lon
  */
 
 size_t list_len(const list_t *h)

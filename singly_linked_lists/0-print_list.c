@@ -1,6 +1,10 @@
 #include "lists.h"
 #include <stdio.h>
 /**
+ * print_list - imprime la lista
+ * @h: puntero a la lista
+ *
+ * Return: numero de elementos
  */
 
 size_t print_list(const list_t *h)
